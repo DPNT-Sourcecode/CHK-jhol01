@@ -44,48 +44,13 @@ class CheckoutSolution:
 
         checkoutTotal = 0
 
-        #assuming 2 Es only makes the Bs in the basket free here
-        freeB = min(cnt("B"), cnt("E")//2)
-        chargeableB = cnt("B") - freeB
+        for item, quantity in counts.items():
+            if quantity <= 0:
+                continue
 
-        quantityA = cnt("A")
-        totalA = 0
-        if quantityA > 0:
-            numA5Bundles = quantityA // 5
-            quantityA -= numA5Bundles * 5
-            totalA += numA5Bundles * 200
-
-            numA3Bundles = quantityA // 3
-            quantityA -= numA3Bundles * 3
-            totalA += numA3Bundles * 130
-
-            totalA += quantityA * prices["A"]
-        
-        checkoutTotal += totalA
-
-        quantityB = chargeableB
-        totalB = 0
-        if quantityB > 0:
-            numB2Bundles = quantityB // 2
-            quantityB -= numB2Bundles * 2 
-            totalB += numB2Bundles * 45
-
-            totalB += quantityB * prices["B"]
-        
-        checkoutTotal+= totalB
-
-        checkoutTotal += cnt("C") * prices["C"]
-        checkoutTotal += cnt("D") * prices["D"]
-        checkoutTotal += cnt("E") * prices["E"]
-
-
-        quantityF = cnt("F")
-        totalF = 0
-        if quantityF > 0:
-            chargeableF = quantityF - (quantityF // 3)
-            totalF += chargeableF * prices["F"]
-        
-        checkoutTotal += totalF
+            if item in multiPriceOffers:
+                for quantityBundle, quantityPrice in multiPriceOffers[item]:
+                    numBundles = quantity 
         
         return checkoutTotal
 
@@ -95,6 +60,7 @@ class CheckoutSolution:
 
 
         
+
 
 
 
