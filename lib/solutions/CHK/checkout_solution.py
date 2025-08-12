@@ -22,13 +22,17 @@ class CheckoutSolution:
             if sku in offers:
                 offerQuantity, offerPrice = offers[sku]
                 numOfferApplied = itemQuantity // offerQuantity
-                quantityRem = 
+                itemsLeft = itemQuantity % offerQuantity
+                checkoutTotal += (numOfferApplied * offerPrice) + (itemsLeft * prices[sku])
 
             else:
-                checkoutTotal += prices[sku] * quantity
+                checkoutTotal += prices[sku] * itemQuantity
+        
+        return checkoutTotal
 
 
         
+
 
 
 
