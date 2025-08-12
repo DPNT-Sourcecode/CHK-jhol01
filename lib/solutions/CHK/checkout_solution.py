@@ -10,9 +10,23 @@ class CheckoutSolution:
         offers = {"A" : (3,130), "B" : (2, 45)}
 
         counts = {}
-        for 
+        for item in skus:
+            if item not in prices:
+                return -1
+            counts[item] = 1 + counts.get(item, 0)
+        
+
+        checkoutTotal = 0
+
+        for sku, quantity in counts.items():
+            if sku in offers:
+
+            else:
+                checkoutTotal += prices[sku] * quantity
+                
 
         
+
 
 
 
