@@ -10,5 +10,3 @@ class SumSolution:
             raise ValueError("Not between 0 and 100")
         
         return x+y
-
-
