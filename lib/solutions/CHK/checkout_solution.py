@@ -10,6 +10,10 @@ class CheckoutSolution:
                  "L" : 90, "M" : 15, "N" : 40, "O" : 10, "P" : 50, "Q" : 30, "R" : 50, "S" : 30, "T" : 20, "U" : 40, "V" : 50, "W" : 20, 
                  "X" : 90, "Y" : 10, "Z" : 50}
 
+        multiPriceOffers = {"A" : [(5, 200), (3, 130)],
+                            "B" : [(2,45)]
+                            "H" : []()}
+
         counts = {}
         for item in skus:
             if item not in prices:
@@ -74,6 +78,7 @@ class CheckoutSolution:
 
 
         
+
 
 
 
