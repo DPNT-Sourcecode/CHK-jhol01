@@ -32,6 +32,10 @@ class CheckoutSolution:
         
         def cnt(item): return counts.get(item, 0)
 
+        for item, (quantityToBuy, FreeItem) in freeItemOffers.items():
+            itemQuantity = cnt(item)
+             
+
 
         
 
@@ -88,3 +92,4 @@ class CheckoutSolution:
 
 
         
+
