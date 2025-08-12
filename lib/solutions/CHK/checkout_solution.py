@@ -16,24 +16,16 @@ class CheckoutSolution:
         
         def cnt(item): return counts.get(item, 0)
 
-        
+
         
 
         checkoutTotal = 0
 
-        for sku, itemQuantity in counts.items():
-            if sku in offers:
-                offerQuantity, offerPrice = offers[sku]
-                numOfferApplied = itemQuantity // offerQuantity
-                itemsLeft = itemQuantity % offerQuantity
-                checkoutTotal += (numOfferApplied * offerPrice) + (itemsLeft * prices[sku])
-
-            else:
-                checkoutTotal += prices[sku] * itemQuantity
-        
-        return checkoutTotal
+        #assuming 2 Es only makes the Bs in the basket free here
+        free_b = min(cnt("B"), cnt("E")//2)
 
 
         
+
 
 
