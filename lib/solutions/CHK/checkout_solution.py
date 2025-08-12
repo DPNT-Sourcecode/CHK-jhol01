@@ -56,7 +56,12 @@ class CheckoutSolution:
         checkoutTotal += cnt("E") * prices["E"]
 
 
-        quantityF = cnt("F") - cnt("F") // 3
+        quantityF = cnt("F")
+        if quantityF > 0:
+            chargeableF = cnt("F") - (cnt("F") // 3)
+            totalF += chargeableF * prcies[F]
+        
+        checkoutTotal += totalF
         
         return checkoutTotal
 
@@ -66,3 +71,4 @@ class CheckoutSolution:
 
 
         
+
