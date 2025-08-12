@@ -33,8 +33,8 @@ class CheckoutSolution:
             totalA += numA5Bundles * 200
 
             numA3Bundles = quantityA // 3
-            quantityA -= numA5Bundles * 3
-            totalA += numA5Bundles * 130
+            quantityA -= numA3Bundles * 3
+            totalA += numA3Bundles * 130
 
             totalA += quantityA * prices["A"]
         
@@ -55,7 +55,7 @@ class CheckoutSolution:
         checkoutTotal += cnt("D") * prices["D"]
         checkoutTotal += cnt("E") * prices["E"]
         
-
+        return checkoutTotal
 
 
 
@@ -63,6 +63,7 @@ class CheckoutSolution:
 
 
         
+
 
 
 
