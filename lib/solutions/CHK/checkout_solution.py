@@ -18,14 +18,18 @@ class CheckoutSolution:
 
         checkoutTotal = 0
 
-        for sku, quantity in counts.items():
+        for sku, itemQuantity in counts.items():
             if sku in offers:
+                offerQuantity, offerPrice = offers[sku]
+                numOfferApplied = itemQuantity // offerQuantity
+                quantityRem = 
 
             else:
                 checkoutTotal += prices[sku] * quantity
-                
+
 
         
+
 
 
 
