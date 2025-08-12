@@ -32,10 +32,12 @@ class CheckoutSolution:
         
         def cnt(item): return counts.get(item, 0)
 
-        for item, (itemQuantityToTrigger, FreeItem) in freeItemOffers.items():
+        for item, (itemQuantityToTrigger, freeItem) in freeItemOffers.items():
             itemQuantityToBuy = cnt(item)
             freeItemCount = itemQuantityToBuy // itemQuantityToTrigger
-             
+            if freeItem in counts:
+                counts[freeItem] = max(0, counts[freeItem] - freeItemCount)
+
 
 
         
@@ -93,5 +95,6 @@ class CheckoutSolution:
 
 
         
+
 
 
