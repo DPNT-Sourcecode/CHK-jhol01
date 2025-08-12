@@ -44,13 +44,17 @@ class CheckoutSolution:
 
         checkoutTotal = 0
 
-        for item, quantity in counts.items():
-            if quantity <= 0:
+        for item, quantityItem in counts.items():
+            if quantityItem <= 0:
                 continue
 
             if item in multiPriceOffers:
-                for quantityBundle, quantityPrice in multiPriceOffers[item]:
-                    numBundles = quantity 
+                for bundleQuantity, bundlePrice in multiPriceOffers[item]:
+                    numBundles = quantityItem // bundleQuantity
+                    quantityItem -= quantityItem * bundleQuantity
+                    checkoutTotal += numBundles * bundlePrice
+
+            checkoutTotal +=  
         
         return checkoutTotal
 
@@ -60,6 +64,7 @@ class CheckoutSolution:
 
 
         
+
 
 
 
