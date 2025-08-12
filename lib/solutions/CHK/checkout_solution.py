@@ -45,7 +45,16 @@ class CheckoutSolution:
         if quantityB > 0:
             numB2Bundles = quantityB // 2
             quantityB -= numB2Bundles * 2 
-            totalB += numB2Bundles 
+            totalB += numB2Bundles * 45
+
+            totalB += quantityB * prices["B"]
+        
+        checkoutTotal+= totalB
+
+        checkoutTotal += cnt("C") * prices["C"]
+        checkoutTotal += cnt("D") * prices["D"]
+        checkoutTotal += cnt("E") * prices["E"]
+        
 
 
 
@@ -54,6 +63,7 @@ class CheckoutSolution:
 
 
         
+
 
 
 
