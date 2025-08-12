@@ -6,7 +6,7 @@ class CheckoutSolution:
         if not isinstance(skus, str): 
             return -1
 
-        prices = {"A" : 50, "B" : 30, "C" : 20, "D" :15}
+        prices = {"A" : 50, "B" : 30, "C" : 20, "D" :15, "E": 40}
         offers = {"A" : (3,130), "B" : (2, 45)}
 
         counts = {}
@@ -32,3 +32,4 @@ class CheckoutSolution:
 
 
         
+
