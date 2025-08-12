@@ -19,9 +19,10 @@ class CheckoutSolution:
                             "V" : [(3, 130), (2, 90)]}
      #   "BuyThisItem" : (QuantityToBuy, getThisItemFree)
         freeItemOffers = {"E" : (2, "B"),
-                          "F" : (3, "F"),
-                          "N" : 3, "M",
-                          ""}
+                          "F" : (2, "F"),
+                          "N" : (3, "M"),
+                          "R" : (3, "Q"),
+                          "U" : (3, "U") }
 
         counts = {}
         for item in skus:
@@ -87,10 +88,3 @@ class CheckoutSolution:
 
 
         
-
-
-
-
-
-
-
