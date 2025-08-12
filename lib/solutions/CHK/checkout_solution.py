@@ -17,7 +17,7 @@ class CheckoutSolution:
                             "P" : [(5, 200)],
                             "Q" : [(3, 80)],
                             "V" : [(3, 130), (2, 90)]}
-     #   "BuyThisItem" : (QuantityToBuy, getThisItemFree)
+     #   "BuyThisItem" : (QuantityToTrigger, getThisItemFree)
         freeItemOffers = {"E" : (2, "B"),
                           "F" : (2, "F"),
                           "N" : (3, "M"),
@@ -32,8 +32,9 @@ class CheckoutSolution:
         
         def cnt(item): return counts.get(item, 0)
 
-        for item, (quantityToBuy, FreeItem) in freeItemOffers.items():
-            itemQuantity = cnt(item)
+        for item, (itemQuantityToTrigger, FreeItem) in freeItemOffers.items():
+            itemQuantityToBuy = cnt(item)
+            freeItemCount = itemQuantityToBuy // itemQuantityToTrigger
              
 
 
@@ -92,4 +93,5 @@ class CheckoutSolution:
 
 
         
+
 
