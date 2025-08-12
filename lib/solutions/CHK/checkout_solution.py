@@ -23,9 +23,15 @@ class CheckoutSolution:
 
         #assuming 2 Es only makes the Bs in the basket free here
         free_b = min(cnt("B"), cnt("E")//2)
+        chargeable_b = cnt("B") - free_b
+
+        quantityA = cnt("A")
+        totalA = 0
+        num5
 
 
         
+
 
 
 
