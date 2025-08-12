@@ -22,8 +22,8 @@ class CheckoutSolution:
         checkoutTotal = 0
 
         #assuming 2 Es only makes the Bs in the basket free here
-        free_b = min(cnt("B"), cnt("E")//2)
-        chargeable_b = cnt("B") - free_b
+        freeB = min(cnt("B"), cnt("E")//2)
+        chargeableB = cnt("B") - freeB
 
         quantityA = cnt("A")
         totalA = 0
@@ -36,6 +36,17 @@ class CheckoutSolution:
             quantityA -= numA5Bundles * 3
             totalA += numA5Bundles * 130
 
+            totalA += quantityA * prices["A"]
+        
+        checkoutTotal += totalA
+
+        quantityB = chargeableB
+        totalB = 0
+        if quantityB > 0:
+            numB2Bundles = quantityB // 2
+            quantityB -= numB2Bundles * 2 
+            totalB += numB2Bundles 
+
 
 
 
@@ -43,6 +54,7 @@ class CheckoutSolution:
 
 
         
+
 
 
 
