@@ -27,10 +27,23 @@ class CheckoutSolution:
 
         quantityA = cnt("A")
         totalA = 0
-        num5
+        if quantityA > 0:
+            numA5Bundles = quantityA // 5
+            quantityA -= numA5Bundles * 5
+            totalA += numA5Bundles * 200
+
+            numA3Bundles = quantityA // 3
+            quantityA -= numA5Bundles * 3
+            totalA += numA5Bundles * 130
+
+
+
+
+
 
 
         
+
 
 
 
