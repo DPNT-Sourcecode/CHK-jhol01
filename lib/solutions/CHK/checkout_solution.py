@@ -6,7 +6,7 @@ class CheckoutSolution:
         if not isinstance(skus, str): 
             return -1
 
-        prices = {"A" : 50, "B" : 30, "C" : 20, "D" :15, "E": 40}
+        prices = {"A" : 50, "B" : 30, "C" : 20, "D" :15, "E": 40, "F" : 10}
 
         counts = {}
         for item in skus:
@@ -54,6 +54,9 @@ class CheckoutSolution:
         checkoutTotal += cnt("C") * prices["C"]
         checkoutTotal += cnt("D") * prices["D"]
         checkoutTotal += cnt("E") * prices["E"]
+
+
+        quantityF = cnt("F") - cnt("F") // 3
         
         return checkoutTotal
 
@@ -63,11 +66,3 @@ class CheckoutSolution:
 
 
         
-
-
-
-
-
-
-
-
