@@ -43,7 +43,13 @@ class CheckoutSolution:
         #Group logic here
         def getPrice(item): return prices[item]
         
+        groupItems = ["S", "T", "X", "Y", "Z"]
+        groupBundlePrice = 45
+        groupBundleSize = 3
 
+        totalGroupItemQuantity = sum(cnt(item) for item in groupItems)
+
+        numGroupBundles = totalGroupItemQuanti
 
 
         for item, quantityItem in counts.items():
@@ -66,5 +72,6 @@ class CheckoutSolution:
 
 
         
+
 
 
