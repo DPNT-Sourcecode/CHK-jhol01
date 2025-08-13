@@ -40,6 +40,9 @@ class CheckoutSolution:
 
         
         checkoutTotal = 0
+        #Group logic here
+        def getPrice(item): return prices[item]
+        
 
 
 
@@ -63,4 +66,5 @@ class CheckoutSolution:
 
 
         
+
 
