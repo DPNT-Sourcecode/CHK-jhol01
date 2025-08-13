@@ -38,11 +38,10 @@ class CheckoutSolution:
             if freeItem in counts:
                 counts[freeItem] = max(0, counts[freeItem] - freeItemCount)
 
-
-
         
-
         checkoutTotal = 0
+
+
 
         for item, quantityItem in counts.items():
             if quantityItem <= 0:
@@ -64,3 +63,4 @@ class CheckoutSolution:
 
 
         
+
