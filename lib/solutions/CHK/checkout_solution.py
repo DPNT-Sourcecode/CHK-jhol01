@@ -55,7 +55,10 @@ class CheckoutSolution:
             checkoutTotal += numGroupBundles * groupBundlePrice
             numItemsToRemove = numGroupBundles * groupBundleSize
 
-            for item in sorted(groupItems)
+            for item in sorted(groupItems, key=getPrice, reverse=True):
+                while counts.get(item, 0) > 0 and numItemsToRemove > 0:
+                    counts[item] -= 1
+                    itemsToRemove -= 1
 
 
         for item, quantityItem in counts.items():
@@ -78,6 +81,7 @@ class CheckoutSolution:
 
 
         
+
 
 
 
