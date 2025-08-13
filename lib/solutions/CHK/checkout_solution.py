@@ -30,7 +30,9 @@ class CheckoutSolution:
                 return -1
             counts[item] = 1 + counts.get(item, 0)
         
-        def cnt(item): return counts.get(item, 0)
+        def cnt(item): 
+            return counts.get(item, 0)
+
 
         for item, (itemQuantityToTrigger, freeItem) in freeItemOffers.items():
             itemQuantityToBuy = cnt(item)
@@ -41,7 +43,8 @@ class CheckoutSolution:
         
         checkoutTotal = 0
         #Group logic here
-        def getPrice(item): return prices[item]
+        def getPrice(item): 
+            return prices[item]
         
         groupItems = ["S", "T", "X", "Y", "Z"]
         groupBundlePrice = 45
@@ -58,7 +61,7 @@ class CheckoutSolution:
             for item in sorted(groupItems, key=getPrice, reverse=True):
                 while counts.get(item, 0) > 0 and numItemsToRemove > 0:
                     counts[item] -= 1
-                    itemsToRemove -= 1
+                    numItemsToRemove -= 1
 
 
         for item, quantityItem in counts.items():
@@ -81,6 +84,7 @@ class CheckoutSolution:
 
 
         
+
 
 
 
